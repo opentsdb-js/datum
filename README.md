@@ -47,7 +47,7 @@ This method is a setter/getter. If no `timestamp` is provided, returns the `time
 datum.timestamp( Date.now() );
 ```
 
-A `timestamp` may either be a date string or a UNIX timestamp.
+A `timestamp` may either be a date string or a UNIX timestamp. For further details, see the [time validation utility](https://github.com/opentsdb-js/opentsdb-validate-time).
 
 
 #### datum.value( [value] )
