@@ -2,7 +2,9 @@ Datum
 =====
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-[OpenTSDB](http://opentsdb.net) datapoint model.
+> [OpenTSDB](http://opentsdb.net) datapoint model.
+
+This library implements the OpenTSDB data [model](http://opentsdb.net/docs/build/html/user_guide/writing.html#data-specification), where the model represents a single timeseries datapoint (datum).
 
 
 ### Install
@@ -18,12 +20,12 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ### Data Model
 
-OpenTSDB specifies a data [model](http://opentsdb.net/docs/build/html/user_guide/writing.html#data-specification) for every timeseries datapoint. To create an OpenTSDB datum,
+To create an OpenTSDB datum,
 
 ``` javascript
-var dataFactory = require( 'opentsdb-datum' );
+var createDatum = require( 'opentsdb-datum' );
 
-var datum = dataFactory();
+var datum = createDatum();
 ```
 
 A datum is configurable and has the following methods...
@@ -132,8 +134,8 @@ console.log( data );
 When used as setters, all setter/getter methods are chainable. For example,
 
 ``` javascript
-var dataFactory = require( 'opentsdb-datum' ),
-	datum = dataFactory();
+var createDatum = require( 'opentsdb-datum' ),
+	datum = createDatum();
 
 datum
 	.metric( 'cpu.utilization' )

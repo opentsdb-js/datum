@@ -39,13 +39,13 @@
 
 	// MODULES //
 
-	var // OpenTSDB datapoint model factory:
-		dataFactory = require( './../lib' );
+	var // OpenTSDB datapoint factory:
+		createDatum = require( './../lib' );
 
 
 	// SCRIPT //
 
-	var datum = dataFactory();
+	var datum = createDatum();
 
 	// Configure the datum:
 	datum
