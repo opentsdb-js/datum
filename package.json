@@ -4,7 +4,7 @@
   "description": "OpenTSDB datapoint model.",
   "author": {
     "name": "Athan Reines",
-    "email": "athan@nodeprime.com"
+    "email": "kgryte@gmail.com"
   },
   "contributors": [
     {}
@@ -17,17 +17,19 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/opentsdb-js/opentsdb-datum.git"
+    "url": "git://github.com/opentsdb-js/datum.git"
   },
   "bugs": {
-    "url": "https://github.com/opentsdb-js/opentsdb-datum/issues"
+    "url": "https://github.com/opentsdb-js/datum/issues"
   },
   "keywords": [
     "opentsdb",
-    "tsdb"
+    "tsdb",
+    "datum",
+    "timeseries"
   ],
   "dependencies": {
-    "opentsdb-validate-time": "~0.0.0"
+    "opentsdb-validate-time": "~0.0.1"
   },
   "devDependencies": {
     "chai": "1.x.x",

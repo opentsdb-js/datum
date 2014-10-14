@@ -128,7 +128,7 @@ console.log( data );
 
 
 
----
+
 ## Notes
 
 When used as setters, all setter/getter methods are chainable. For example,
@@ -147,7 +147,7 @@ datum
 ```
 
 
----
+
 ## Tests
 
 ### Unit
@@ -172,11 +172,11 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
----
+
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
@@ -191,17 +191,17 @@ Copyright &copy; 2014. Athan Reines.
 [npm-image]: http://img.shields.io/npm/v/opentsdb-datum.svg
 [npm-url]: https://npmjs.org/package/opentsdb-datum
 
-[travis-image]: http://img.shields.io/travis/opentsdb-js/opentsdb-datum/master.svg
-[travis-url]: https://travis-ci.org/opentsdb-js/opentsdb-datum
+[travis-image]: http://img.shields.io/travis/opentsdb-js/datum/master.svg
+[travis-url]: https://travis-ci.org/opentsdb-js/datum
 
-[coveralls-image]: https://img.shields.io/coveralls/opentsdb-js/opentsdb-datum/master.svg
-[coveralls-url]: https://coveralls.io/r/opentsdb-js/opentsdb-datum?branch=master
+[coveralls-image]: https://img.shields.io/coveralls/opentsdb-js/datum/master.svg
+[coveralls-url]: https://coveralls.io/r/opentsdb-js/datum?branch=master
 
-[dependencies-image]: http://img.shields.io/david/opentsdb-js/opentsdb-datum.svg
-[dependencies-url]: https://david-dm.org/opentsdb-js/opentsdb-datum
+[dependencies-image]: http://img.shields.io/david/opentsdb-js/datum.svg
+[dependencies-url]: https://david-dm.org/opentsdb-js/datum
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/opentsdb-js/opentsdb-datum.svg
-[dev-dependencies-url]: https://david-dm.org/dev/opentsdb-js/opentsdb-datum
+[dev-dependencies-image]: http://img.shields.io/david/dev/opentsdb-js/datum.svg
+[dev-dependencies-url]: https://david-dm.org/dev/opentsdb-js/datum
 
-[github-issues-image]: http://img.shields.io/github/issues/opentsdb-js/opentsdb-datum.svg
-[github-issues-url]: https://github.com/opentsdb-js/opentsdb-datum/issues
+[github-issues-image]: http://img.shields.io/github/issues/opentsdb-js/datum.svg
+[github-issues-url]: https://github.com/opentsdb-js/datum/issues
