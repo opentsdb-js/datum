@@ -333,6 +333,23 @@ describe( 'lib', function tests() {
 				datum.toString();
 			}
 		});
+		
+		it( 'should accept a value of 0', function test() {
+			var datum = createDatum(),
+				metric = 'cpu.utilization',
+				timestamp = Date.now(),
+				value = 0,
+				expected;
+
+			expected = metric + ' ' + timestamp + ' ' + value;
+
+			datum
+				.metric( metric )
+				.timestamp( timestamp )
+				.value( value );
+
+			assert.strictEqual( datum.toString(), expected );
+		});
 
 		it( 'should serialize a datum', function test() {
 			var datum = createDatum(),
