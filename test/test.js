@@ -289,13 +289,16 @@ describe( 'lib', function tests() {
 		it( 'should throw an error if a datum is not assigned a metric name', function test() {
 			var datum = createDatum(),
 				timestamp = Date.now(),
-				value = Math.random();
+				value = Math.random(),
+				tagk = 'tagk',
+				tagv = 'tagv';
 
 			datum
 				.timestamp( timestamp )
-				.value( value );
+				.value( value )
+				.tags( tagk, tagv );
 
-			expect( foo ).to.throw( Error );
+			expect( foo ).to.throw( Error, 'name' );
 
 			function foo() {
 				datum.toString();
@@ -305,13 +308,16 @@ describe( 'lib', function tests() {
 		it( 'should throw an error if a datum is not assigned a timestamp', function test() {
 			var datum = createDatum(),
 				metric = 'cpu.utilization',
-				value = Math.random();
+				value = Math.random(),
+				tagk = 'tagk',
+				tagv = 'tagv';
 
 			datum
 				.metric( metric )
-				.value( value );
+				.value( value )
+				.tags( tagk, tagv );
 
-			expect( foo ).to.throw( Error );
+				expect( foo ).to.throw( Error, 'timestamp' );
 
 			function foo() {
 				datum.toString();
@@ -321,13 +327,16 @@ describe( 'lib', function tests() {
 		it( 'should throw an error if a datum is not assigned a value', function test() {
 			var datum = createDatum(),
 				metric = 'cpu.utilization',
-				timestamp = Date.now();
+				timestamp = Date.now(),
+				tagk = 'tagk',
+				tagv = 'tagv';
 
 			datum
 				.metric( metric )
-				.timestamp( timestamp );
+				.timestamp( timestamp )
+				.tags( tagk, tagv );
 
-			expect( foo ).to.throw( Error );
+			expect( foo ).to.throw( Error, 'value' );
 
 			function foo() {
 				datum.toString();
@@ -338,17 +347,38 @@ describe( 'lib', function tests() {
 			var datum = createDatum(),
 				metric = 'cpu.utilization',
 				timestamp = Date.now(),
+				tagk = 'tagk',
+				tagv = 'tagv',
 				value = 0,
 				expected;
 
-			expected = metric + ' ' + timestamp + ' ' + value;
+			expected = metric + ' ' + timestamp + ' ' + value + ' ' + tagk + '=' + tagv;
 
 			datum
 				.metric( metric )
 				.timestamp( timestamp )
+				.tags( tagk, tagv )
 				.value( value );
 
 			assert.strictEqual( datum.toString(), expected );
+		});
+		
+		it( 'should throw an error if a datum is not assigned at least one tag', function test() {
+			var datum = createDatum(),
+				metric = 'cpu.utilization',
+				value = Math.random(),
+				timestamp = Date.now();
+
+			datum
+				.metric( metric )
+				.value( value )
+				.timestamp( timestamp );
+
+			expect( foo ).to.throw( Error, 'tag' );
+
+			function foo() {
+				datum.toString();
+			}
 		});
 
 		it( 'should serialize a datum', function test() {
