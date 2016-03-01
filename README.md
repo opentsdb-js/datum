@@ -33,7 +33,7 @@ A `datum` is configurable and has the following methods...
 
 #### datum.metric( [name] )
 
-This method is a setter/getter. If no metric `name` is provided, the method returns the metric `name` assigned to a datum. A metric `name` is __required__ to properly describe a `datum`. To set a metric `name`,
+This method is a setter/getter. If no metric `name` is provided, the method returns the metric `name` assigned to a `datum`. A metric `name` is __required__ to properly describe a `datum`. To set a metric `name`,
 
 ``` javascript
 datum.metric( 'cpu.utilization' );
@@ -41,7 +41,7 @@ datum.metric( 'cpu.utilization' );
 
 #### datum.timestamp( [timestamp] )
 
-This method is a setter/getter. If no `timestamp` is provided, the method returns the `timestamp` assigned to a datum. A `timestamp` is __required__ to properly describe a `datum`. To set a `timestamp`,
+This method is a setter/getter. If no `timestamp` is provided, the method returns the `timestamp` assigned to a `datum`. A `timestamp` is __required__ to properly describe a `datum`. To set a `timestamp`,
 
 ``` javascript
 datum.timestamp( Date.now() );
