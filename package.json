@@ -1,6 +1,6 @@
 {
   "name": "opentsdb-datum",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "OpenTSDB datapoint model.",
   "author": {
     "name": "Athan Reines",
