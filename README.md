@@ -255,7 +255,7 @@ $ make view-browser-tests
 
 ## Copyright
 
-Copyright &copy; 2014-2016. The [Opentsdb.js][opentsdb-js] Authors.
+Copyright &copy; 2014-2016. The [OpenTSDB.js][opentsdb-js] Authors.
 
 
 [npm-image]: http://img.shields.io/npm/v/opentsdb-datum.svg

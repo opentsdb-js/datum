@@ -224,7 +224,7 @@ tape( 'if not provided an argument, the `tags` method returns all tags', functio
 	t.end();
 });
 
-tape( 'if provided only a tag name, the `tags` method return the tag value', function test( t ) {
+tape( 'if provided only a tag name, the `tags` method returns the corresponding tag value', function test( t ) {
 	var datum = new Datum();
 	datum.tags( 'beep', 'boop' );
 
