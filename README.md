@@ -255,7 +255,7 @@ $ make view-browser-tests
 
 ## Copyright
 
-Copyright &copy; 2016. Athan Reines.
+Copyright &copy; 2014-2016. The [Opentsdb.js][opentsdb-js] Authors.
 
 
 [npm-image]: http://img.shields.io/npm/v/opentsdb-datum.svg
@@ -279,6 +279,8 @@ Copyright &copy; 2016. Athan Reines.
 [tape]: https://github.com/substack/tape
 [istanbul]: https://github.com/gotwarlost/istanbul
 [testling]: https://ci.testling.com
+
+[opentsdb-js]: https://github.com/opentsdb-js
 
 [opentsdb]: http://opentsdb.net
 [opentsdb-data-model]: http://opentsdb.net/docs/build/html/user_guide/writing.html#data-specification
