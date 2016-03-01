@@ -36,7 +36,12 @@ A `datum` is configurable and has the following methods...
 This method is a setter/getter. If no metric `name` is provided, the method returns the metric `name` assigned to a `datum`. A metric `name` is __required__ to properly describe a `datum`. To set a metric `name`,
 
 ``` javascript
+// Set a metric name:
 datum.metric( 'cpu.utilization' );
+
+// Get a metric name:
+var metric = datum.metric();
+// returns 'cpu.utilization'
 ```
 
 #### datum.timestamp( [timestamp] )
@@ -44,7 +49,14 @@ datum.metric( 'cpu.utilization' );
 This method is a setter/getter. If no `timestamp` is provided, the method returns the `timestamp` assigned to a `datum`. A `timestamp` is __required__ to properly describe a `datum`. To set a `timestamp`,
 
 ``` javascript
-datum.timestamp( Date.now() );
+var ts = Date.now();
+
+// Set a timestamp:
+datum.timestamp( ts );
+
+// Get a timestamp:
+var v = datum.timestamp();
+// returns <ts>
 ```
 
 A `timestamp` may either be a date `string` or a UNIX timestamp. For further details, see the [time validation utility][opentsdb-validate-time].
@@ -55,7 +67,14 @@ A `timestamp` may either be a date `string` or a UNIX timestamp. For further det
 This method is a setter/getter. If no `value` is provided, the method returns the datum `value`. A `value` is __required__ to properly describe a `datum`. To set a datum `value`,
 
 ``` javascript
-datum.value( Math.random() );
+var value = Math.random();
+
+// Set a value:
+datum.value( value );
+
+// Get a value:
+var v = datum.value();
+// returns <value>
 ```
 
 
@@ -64,7 +83,16 @@ datum.value( Math.random() );
 This method is a setter/getter. If no arguments are provided, the method returns all tag names and their values. If a `tag` name is specified, the method returns the value for that `tag`. Otherwise, the method sets a `tag` to the specified `value`. At least one `tag` is __required__ to properly describe a `datum`. To set a `tag`,
 
 ``` javascript
+// Set a tag:
 datum.tags( 'beep', 'boop' );
+
+// Get a tag:
+var tag = datum.tags( 'beep' );
+// returns 'boop';
+
+// Get all tags:
+var tags = datum.tags();
+// returns {'beep':'boop'}
 ```
 
 A `tag` is an additional piece of information which describes a `datum`. For example, a `cpu.user` timeseries `datum` may originate from a particular host; e.g., `host=webserver1`. To later be able to query [OpenTSDB][opentsdb] for only those `cpu.user` timeseries originating from `webserver1` while optimizing for aggregations across multiple web servers, [OpenTSDB][opentsdb] allows data tagging. In this case,
@@ -94,7 +122,16 @@ datum.dtag( 'beep' );
 Serializes the `datum`. A `datum` must have a `metric name`, `timestamp`, `value`, and at least __one__ `tag` to be serializable. To serialize a `datum`,
 
 ``` javascript
-datum.toString();
+datum = createDatum();
+
+datum.metric( 'cpu.utilization' )
+	.timestamp( 1456814180309 )
+	.value( 0.94 )
+	.tags( 'beep', 'boop' )
+	.tags( 'foo', 'bar' );
+
+var str = datum.toString();
+// returns 'cpu.utilization 1456814180309 0.94 beep=boop foo=bar'
 ```
 
 
