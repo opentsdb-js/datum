@@ -265,7 +265,7 @@ Copyright &copy; 2014-2016. The [OpenTSDB.js][opentsdb-js] Authors.
 [build-url]: https://travis-ci.org/opentsdb-js/datum
 
 [coverage-image]: https://img.shields.io/codecov/c/github/opentsdb-js/datum/master.svg
-[coverage-url]: https://david-dm.org/opentsdb-js/datum
+[coverage-url]: https://codecov.io/github/opentsdb-js/datum.svg?branch=master
 
 [dependencies-image]: http://img.shields.io/david/opentsdb-js/datum.svg
 [dependencies-url]: https://david-dm.org/opentsdb-js/datum
