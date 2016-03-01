@@ -143,13 +143,14 @@ var str = datum.toString();
 	``` javascript
 	var datum = createDatum();
 
-	datum
+	var str = datum
 		.metric( 'cpu.utilization' )
 		.timestamp( Date.now() )
 		.value( Math.random() )
 		.tags( 'beep', 'boop' )
 		.tags( 'foo', 'bar' )
 		.toString();
+	// returns <string>
 	```
 
 *  Because a `datum` is configurable, a `datum` serves as a factory for serializing similar data.
@@ -179,6 +180,7 @@ var str = datum.toString();
 	data = data.join( '\n' );
 
 	console.log( data );
+	// returns <string>
 	```
 
 
